@@ -228,4 +228,43 @@ extension NSColor {
     static var searchTextColor: NSColor {
         return NSColor.white.withAlphaComponent(0.85)
     }
+	
+	// MARK: - Drawn Shield Colors
+	static var shieldGradientTop: NSColor {
+		return NSColor.primaryAccent.lighter
+	}
+	
+	static var shieldGradientBottom: NSColor {
+		return .primaryAccent
+	}
+	
+	static var shieldCheckmark: NSColor {
+		return .primaryAccent
+	}
+}
+
+
+
+// To Help With Color Variations; Can Be Used Indirectly On Theme Values above
+extension NSColor {
+	
+	/// A lighter representation of the caller's color value. This is done by increasing the `brightness` value by 50%.
+	var lighter: NSColor {
+		var h: CGFloat = 0
+		var s: CGFloat = 0
+		var b: CGFloat = 0
+		var a: CGFloat = 0
+		self.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
+		return NSColor(hue: h, saturation: s, brightness: b * 1.5, alpha: a)
+	}
+	
+	/// A darker representation of the caller's color value. This is done be decreasing the `brightness` value by 25%.
+	var darker: NSColor {
+		var h: CGFloat = 0
+		var s: CGFloat = 0
+		var b: CGFloat = 0
+		var a: CGFloat = 0
+		self.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
+		return NSColor(hue: h, saturation: s, brightness: b * 0.75, alpha: a)
+	}
 }
