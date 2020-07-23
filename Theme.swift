@@ -77,6 +77,14 @@ extension NSColor {
     static var loginViewPasswordAccent : NSColor {
         return NSColor(hexColorString: "FF9B9B9B")
     }
+    
+    static var loginViewUsernameHighlight : NSColor {
+        return NSColor(hexColorString: "AA212D")
+    }
+    
+    static var loginViewPasswordHighlight : NSColor {
+        return NSColor(hexColorString: "AA212D")
+    }
 
     static var loginButton: NSColor {
         return primaryAccent
