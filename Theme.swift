@@ -18,6 +18,8 @@ final class Theme {
     static let serverListHeaderFontSize: CGFloat = 12.0
     // header height will scale based on the font size
     static let serverListHeaderHeight: CGFloat = serverListHeaderFontSize + 14.0
+	
+	static let drawCustomShield = true
 }
 
 extension NSColor {
@@ -275,4 +277,20 @@ extension NSColor {
 		self.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
 		return NSColor(hue: h, saturation: s, brightness: b * 0.75, alpha: a)
 	}
+}
+
+extension ShieldView {
+	/**
+	* Override this function to provide a custom drawn shield view instead of the default.
+	*/
+	func drawCustom() {
+	}
+	
+	/**
+	* Provide a custom shield for the disconnected view.
+	*/
+	func drawCustomDisconnected() {
+		drawCustom()
+	}
+	
 }
