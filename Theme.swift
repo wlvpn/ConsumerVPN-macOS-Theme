@@ -119,9 +119,21 @@ extension NSColor {
     static var loginViewShortTriangleBg: NSColor {
         return NSColor(hexColorString: "262a37")
     }
+	
+	static var loginViewTallTriangleShadow: NSColor {
+		return NSColor.black
+    }
+
+	static var loginViewShortTriangleShadow: NSColor {
+		return NSColor.black
+    }
     
     // MARK: LoadingView
-    static var loadingAnimationColor: NSColor {
+    static var loadingAnimationCircleColor: NSColor {
+        return NSColor(hexColorString: "FF4A90E2")
+    }
+	
+	static var loadingAnimationLabelColor: NSColor {
         return NSColor(hexColorString: "FF4A90E2")
     }
 
@@ -170,6 +182,10 @@ extension NSColor {
     static var disconnectLabelText : NSColor {
         return NSColor.white
     }
+	
+	static var disconnectViewIcons : NSColor {
+		return NSColor.primaryAccent
+	}
     
     // MARK: Cancel Button
     static var cancelButton: NSColor {
