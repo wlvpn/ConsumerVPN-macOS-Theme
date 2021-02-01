@@ -22,7 +22,7 @@ final class Theme {
 	static let drawCustomShield = true
 	
 	static let revenueCatAPIKey = "<api key for revenue cat>"
-	static let iapProductIdentifiers = []
+	static let iapProductIdentifiers : [String] = []
 	
 	// In-app purchase products view text
 	static let iapUpgradeLabel = "UPGRADE TO"
