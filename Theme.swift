@@ -20,6 +20,26 @@ final class Theme {
     static let serverListHeaderHeight: CGFloat = serverListHeaderFontSize + 14.0
 	
 	static let drawCustomShield = true
+	
+	static let revenueCatAPIKey = "<api key for revenue cat>"
+	static let iapProductIdentifiers = []
+	
+	// In-app purchase products view text
+	static let iapUpgradeLabel = "UPGRADE TO"
+	static let iapPremiumLabel = "PREMIUM"
+	static let iapSubtitle = "Enjoy a stable connection anywhere, anytime. No data limits each year."
+	static let iapPoint1 = "Stay safe on public Wi-Fi"
+	static let iapPoint2 = "Keep your information private"
+	static let iapPoint3 = "Browse like you're at home"
+	
+	// In-app purchase individual product text
+	static let singleIAPPoint1 = "Stay safe on public Wi-Fi"
+	static let singleIAPPoint2 = "Keep your information private"
+	static let singleIAPPoint3 = "Browse like you're at home"
+	static let singleIAPPoint4 = "Bypass local censorship"
+	static let singleIAPSubscribeButtonText = "Subscribe Now"
+	static let singleIAPSubscriptionDetailsTitle = "Subscription details"
+	static let singleIAPSubscriptionDetailsText = "The subscription automatically renews after the 7-day free trial. You can cancel anytime. By signing up for a free trial, you agree to our Terms of Service and Privacy Policy. Payment will be charged to your Apple ID account at the confirmation of purchase. Subscription automatically renews unless it is cancelled at least 24 hours before the end of the current period. You can manage and cancel your subscriptions by going to your account settings on the App Store after purchase. Any unused portion of the free trial period will be forfeited when a subscription is purchased."
 }
 
 extension NSColor {
