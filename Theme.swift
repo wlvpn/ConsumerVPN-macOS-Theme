@@ -23,6 +23,7 @@ final class Theme {
 	
 	static let revenueCatAPIKey = "<api key for revenue cat>"
 	static let iapProductIdentifiers : [String] = []
+    static let enableIAP = false
 	
 	// In-app purchase products view text
 	static let iapUpgradeLabel = "UPGRADE TO"
