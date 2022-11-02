@@ -7,7 +7,8 @@ import Foundation
 
 final class Theme {
     static let brandName = "Consumer VPN"
-
+    static let configurationName = "<Your company custom VPN configuration name>"
+    
     static let signupURL = "https://www.wlvpn.com"
     static let forgotPasswordURL = "https://www.wlvpn.com"
     static let contactSupportURL = "https://www.wlvpn.com"
@@ -18,29 +19,29 @@ final class Theme {
     static let serverListHeaderFontSize: CGFloat = 12.0
     // header height will scale based on the font size
     static let serverListHeaderHeight: CGFloat = serverListHeaderFontSize + 14.0
-	
-	static let drawCustomShield = true
-	
-	static let revenueCatAPIKey = "<api key for revenue cat>"
-	static let iapProductIdentifiers : [String] = []
+    
+    static let drawCustomShield = true
+    
+    static let revenueCatAPIKey = "<api key for revenue cat>"
+    static let iapProductIdentifiers : [String] = []
     static let enableIAP = false
-	
-	// In-app purchase products view text
-	static let iapUpgradeLabel = "UPGRADE TO"
-	static let iapPremiumLabel = "PREMIUM"
-	static let iapSubtitle = "Enjoy a stable connection anywhere, anytime. No data limits each year."
-	static let iapPoint1 = "Stay safe on public Wi-Fi"
-	static let iapPoint2 = "Keep your information private"
-	static let iapPoint3 = "Browse like you're at home"
-	
-	// In-app purchase individual product text
-	static let singleIAPPoint1 = "Stay safe on public Wi-Fi"
-	static let singleIAPPoint2 = "Keep your information private"
-	static let singleIAPPoint3 = "Browse like you're at home"
-	static let singleIAPPoint4 = "Bypass local censorship"
-	static let singleIAPSubscribeButtonText = "Subscribe Now"
-	static let singleIAPSubscriptionDetailsTitle = "Subscription details"
-	static let singleIAPSubscriptionDetailsText = "The subscription automatically renews after the 7-day free trial. You can cancel anytime. By signing up for a free trial, you agree to our Terms of Service and Privacy Policy. Payment will be charged to your Apple ID account at the confirmation of purchase. Subscription automatically renews unless it is cancelled at least 24 hours before the end of the current period. You can manage and cancel your subscriptions by going to your account settings on the App Store after purchase. Any unused portion of the free trial period will be forfeited when a subscription is purchased."
+    
+    // In-app purchase products view text
+    static let iapUpgradeLabel = "UPGRADE TO"
+    static let iapPremiumLabel = "PREMIUM"
+    static let iapSubtitle = "Enjoy a stable connection anywhere, anytime. No data limits each year."
+    static let iapPoint1 = "Stay safe on public Wi-Fi"
+    static let iapPoint2 = "Keep your information private"
+    static let iapPoint3 = "Browse like you're at home"
+    
+    // In-app purchase individual product text
+    static let singleIAPPoint1 = "Stay safe on public Wi-Fi"
+    static let singleIAPPoint2 = "Keep your information private"
+    static let singleIAPPoint3 = "Browse like you're at home"
+    static let singleIAPPoint4 = "Bypass local censorship"
+    static let singleIAPSubscribeButtonText = "Subscribe Now"
+    static let singleIAPSubscriptionDetailsTitle = "Subscription details"
+    static let singleIAPSubscriptionDetailsText = "The subscription automatically renews after the 7-day free trial. You can cancel anytime. By signing up for a free trial, you agree to our Terms of Service and Privacy Policy. Payment will be charged to your Apple ID account at the confirmation of purchase. Subscription automatically renews unless it is cancelled at least 24 hours before the end of the current period. You can manage and cancel your subscriptions by going to your account settings on the App Store after purchase. Any unused portion of the free trial period will be forfeited when a subscription is purchased."
 }
 
 extension NSColor {
@@ -140,21 +141,21 @@ extension NSColor {
     static var loginViewShortTriangleBg: NSColor {
         return NSColor(hexColorString: "262a37")
     }
-	
-	static var loginViewTallTriangleShadow: NSColor {
-		return NSColor.black
+    
+    static var loginViewTallTriangleShadow: NSColor {
+        return NSColor.black
     }
 
-	static var loginViewShortTriangleShadow: NSColor {
-		return NSColor.black
+    static var loginViewShortTriangleShadow: NSColor {
+        return NSColor.black
     }
     
     // MARK: LoadingView
     static var loadingAnimationCircleColor: NSColor {
         return NSColor(hexColorString: "FF4A90E2")
     }
-	
-	static var loadingAnimationLabelColor: NSColor {
+    
+    static var loadingAnimationLabelColor: NSColor {
         return NSColor(hexColorString: "FF4A90E2")
     }
 
@@ -203,10 +204,10 @@ extension NSColor {
     static var disconnectLabelText : NSColor {
         return NSColor.white
     }
-	
-	static var disconnectViewIcons : NSColor {
-		return NSColor.primaryAccent
-	}
+    
+    static var disconnectViewIcons : NSColor {
+        return NSColor.primaryAccent
+    }
     
     // MARK: Cancel Button
     static var cancelButton: NSColor {
@@ -275,59 +276,59 @@ extension NSColor {
     static var searchTextColor: NSColor {
         return NSColor.white.withAlphaComponent(0.85)
     }
-	
-	// MARK: - Drawn Shield Colors
-	static var shieldGradientTop: NSColor {
-		return NSColor.primaryAccent.lighter
-	}
-	
-	static var shieldGradientBottom: NSColor {
-		return .primaryAccent
-	}
-	
-	static var shieldCheckmark: NSColor {
-		return .primaryAccent
-	}
+    
+    // MARK: - Drawn Shield Colors
+    static var shieldGradientTop: NSColor {
+        return NSColor.primaryAccent.lighter
+    }
+    
+    static var shieldGradientBottom: NSColor {
+        return .primaryAccent
+    }
+    
+    static var shieldCheckmark: NSColor {
+        return .primaryAccent
+    }
 }
 
 
 
 // To Help With Color Variations; Can Be Used Indirectly On Theme Values above
 extension NSColor {
-	
-	/// A lighter representation of the caller's color value. This is done by increasing the `brightness` value by 50%.
-	var lighter: NSColor {
-		var h: CGFloat = 0
-		var s: CGFloat = 0
-		var b: CGFloat = 0
-		var a: CGFloat = 0
-		self.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
-		return NSColor(hue: h, saturation: s, brightness: b * 1.5, alpha: a)
-	}
-	
-	/// A darker representation of the caller's color value. This is done be decreasing the `brightness` value by 25%.
-	var darker: NSColor {
-		var h: CGFloat = 0
-		var s: CGFloat = 0
-		var b: CGFloat = 0
-		var a: CGFloat = 0
-		self.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
-		return NSColor(hue: h, saturation: s, brightness: b * 0.75, alpha: a)
-	}
+    
+    /// A lighter representation of the caller's color value. This is done by increasing the `brightness` value by 50%.
+    var lighter: NSColor {
+        var h: CGFloat = 0
+        var s: CGFloat = 0
+        var b: CGFloat = 0
+        var a: CGFloat = 0
+        self.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
+        return NSColor(hue: h, saturation: s, brightness: b * 1.5, alpha: a)
+    }
+    
+    /// A darker representation of the caller's color value. This is done be decreasing the `brightness` value by 25%.
+    var darker: NSColor {
+        var h: CGFloat = 0
+        var s: CGFloat = 0
+        var b: CGFloat = 0
+        var a: CGFloat = 0
+        self.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
+        return NSColor(hue: h, saturation: s, brightness: b * 0.75, alpha: a)
+    }
 }
 
 extension ShieldView {
-	/**
-	* Override this function to provide a custom drawn shield view instead of the default.
-	*/
-	func drawCustom() {
-	}
-	
-	/**
-	* Provide a custom shield for the disconnected view.
-	*/
-	func drawCustomDisconnected() {
-		drawCustom()
-	}
-	
+    /**
+    * Override this function to provide a custom drawn shield view instead of the default.
+    */
+    func drawCustom() {
+    }
+    
+    /**
+    * Provide a custom shield for the disconnected view.
+    */
+    func drawCustomDisconnected() {
+        drawCustom()
+    }
+    
 }
