@@ -278,6 +278,10 @@ extension NSColor {
     static var searchTextColor: NSColor {
         return NSColor.white.withAlphaComponent(0.85)
     }
+    
+    static var searchBackgroundColor: NSColor {
+        return NSColor(hexColorString: "212626")
+    }
 	
 	// MARK: - Drawn Shield Colors
 	static var shieldGradientTop: NSColor {
